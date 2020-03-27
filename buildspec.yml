@@ -1,0 +1,7 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - docker build -t 'php-img' .
+      - docker run -d -p 8080:80 --name 'php-cont' php-img
